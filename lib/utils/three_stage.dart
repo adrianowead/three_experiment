@@ -47,7 +47,7 @@ class _MyAppState extends State<webgl_camera_array> {
 
   late three.WebGLRenderTarget renderTarget;
 
-  dynamic? sourceTexture;
+  dynamic sourceTexture;
 
   bool loaded = false;
 
