@@ -4,12 +4,11 @@ import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 import 'package:three_experiment/utils/three_stage.dart';
 
 import 'controller.dart';
-
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,8 +32,6 @@ class AnotherHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return const AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -46,7 +43,6 @@ class AnotherHome extends StatelessWidget {
     );
   }
 }
-
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -203,15 +199,15 @@ class WTFIsThis extends StatelessWidget {
     return DefaultTextStyle.merge(
       style: GoogleFonts.kanit(),
       textAlign: TextAlign.center,
-      child: ColoredBox(
-        color: const Color(0xFFE36A00),
+      child: const ColoredBox(
+        color: Color(0xFFE36A00),
         child: Padding(
-          padding: const EdgeInsets.symmetric(
+          padding: EdgeInsets.symmetric(
             horizontal: 16.0,
             vertical: 8.0,
           ),
           child: Column(
-            children: const [
+            children: [
               Text(
                 "What the hell is this?",
                 style: TextStyle(
@@ -237,8 +233,8 @@ class WTFIsThis extends StatelessWidget {
               ),
               Text(
                 "NES Controller Free by donnichols "
-                    "(https://sketchfab.com/donnichols) is licensed under "
-                    "Creative Commons Attribution.",
+                "(https://sketchfab.com/donnichols) is licensed under "
+                "Creative Commons Attribution.",
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.w300,

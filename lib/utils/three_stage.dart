@@ -14,8 +14,6 @@ class AnotherthreeStage extends StatelessWidget {
 }
 
 class webgl_camera_array extends StatefulWidget {
-
-
   webgl_camera_array({Key? key}) : super(key: key);
 
   @override
@@ -52,7 +50,6 @@ class _MyAppState extends State<webgl_camera_array> {
   dynamic? sourceTexture;
 
   bool loaded = false;
-
 
   @override
   void dispose() {
@@ -108,7 +105,6 @@ class _MyAppState extends State<webgl_camera_array> {
 
     initPlatformState();
   }
-
 
   render() {
     int _t = DateTime.now().millisecondsSinceEpoch;
@@ -255,12 +251,9 @@ class _MyAppState extends State<webgl_camera_array> {
     });
   }
 
-
-
-
   @override
   Widget build(BuildContext context) {
-    return  Builder(
+    return Builder(
       builder: (BuildContext context) {
         initSize(context);
         return SingleChildScrollView(child: _build(context));
@@ -282,10 +275,10 @@ class _MyAppState extends State<webgl_camera_array> {
                     if (kIsWeb) {
                       return three3dRender.isInitialized
                           ? HtmlElementView(
-                          viewType: three3dRender.textureId!.toString())
+                              viewType: three3dRender.textureId!.toString())
                           : Container(
-                        color: Colors.red,
-                      );
+                              color: Colors.red,
+                            );
                     } else {
                       return three3dRender.isInitialized
                           ? Texture(textureId: three3dRender.textureId!)
